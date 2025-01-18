@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.3 on linux)" generated="2025-01-18T14:55:59.590676" rpa="false" schemaversion="5">
+<suite id="s1" name="Mall Creditcard Success" source="/home/dlwlrma/Desktop/Selenium/robot_framework_workshop/mall/mall_creditcard_success.robot">
+<test id="s1-t1" name="ทดสอบซื้อสินค้าหลังจากนั้นชำระเงินด้วย Credit card ของ visa และชำระเงินสำเร็จ" line="11">
+<kw name="ค้นหาสินค้าด้วยคำค้นหา">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:55:59.675060" level="INFO">Opening browser 'chrome' to base url 'http://159.223.89.151/product/list'.</msg>
+<arg>${DEV_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-18T14:55:59.674899" elapsed="1.450763"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:01.126194" level="INFO">Typing text 'Bicycle' into text field 'id=search-product-input'.</msg>
+<arg>id=search-product-input</arg>
+<arg>${SEARCH_KEY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:01.125863" elapsed="0.058555"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:01.184814" level="INFO">Clicking button 'id=search-product-btn'.</msg>
+<arg>id=search-product-btn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:01.184587" elapsed="0.241614"/>
+</kw>
+<arg>Bicycle</arg>
+<status status="PASS" start="2025-01-18T14:55:59.674425" elapsed="1.751926"/>
+</kw>
+<kw name="ตรวจสอบผลลัพธ์การค้นหา">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${name}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-18T14:56:01.426955" elapsed="0.219345"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:01.646668" level="INFO">Verifying element 'id=product-card-name-1' contains exact text 'Balance Training Bicycle'.</msg>
+<arg>id=${name_id}</arg>
+<arg>${name}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-01-18T14:56:01.646444" elapsed="0.016795"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:01.663600" level="INFO">Verifying element 'id=product-card-price-1' contains exact text '฿4,314.60'.</msg>
+<arg>id=${price_id}</arg>
+<arg>${price}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-01-18T14:56:01.663389" elapsed="0.010983"/>
+</kw>
+<arg>Balance Training Bicycle</arg>
+<arg>฿4,314.60</arg>
+<arg>product-card-name-1</arg>
+<arg>product-card-price-1</arg>
+<status status="PASS" start="2025-01-18T14:56:01.426577" elapsed="0.247895"/>
+</kw>
+<kw name="เลือกดูสินค้า">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:01.675060" level="INFO">Clicking element 'id=product-card-name-1'.</msg>
+<arg>id=${name_id}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:01.674908" elapsed="0.199198"/>
+</kw>
+<arg>product-card-name-1</arg>
+<status status="PASS" start="2025-01-18T14:56:01.674673" elapsed="0.199529"/>
+</kw>
+<kw name="ตรวจสอบรายละเอียดสินค้า">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${name}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-18T14:56:01.874691" elapsed="0.208156"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:02.083253" level="INFO">Verifying element 'id=product-detail-product-name' contains exact text 'Balance Training Bicycle'.</msg>
+<arg>id=${name_id}</arg>
+<arg>${name}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-01-18T14:56:02.083020" elapsed="0.009358"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:02.092703" level="INFO">Verifying element 'id=product-detail-price-thb' contains exact text '฿4,314.60'.</msg>
+<arg>id=${price_id}</arg>
+<arg>${price}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-01-18T14:56:02.092507" elapsed="0.009331"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:02.102152" level="INFO">Verifying element 'id=product-detail-point' contains exact text '43 Points'.</msg>
+<arg>id=${point_id}</arg>
+<arg>${point}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-01-18T14:56:02.101966" elapsed="0.009521"/>
+</kw>
+<arg>Balance Training Bicycle</arg>
+<arg>฿4,314.60</arg>
+<arg>43 Points</arg>
+<arg>product-detail-product-name</arg>
+<arg>product-detail-price-thb</arg>
+<arg>product-detail-point</arg>
+<status status="PASS" start="2025-01-18T14:56:01.874401" elapsed="0.237172"/>
+</kw>
+<kw name="เพิ่มจำนวนสินค้าที่ต้องการซื้อ">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:02.112045" level="INFO">Clicking button 'id=product-detail-quantity-increment-btn'.</msg>
+<arg>id=product-detail-quantity-increment-btn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:02.111927" elapsed="0.041288"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:02.163164" level="INFO">${quantity} = 2</msg>
+<var>${quantity}</var>
+<arg>id=product-detail-quantity-input</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:02.153363" elapsed="0.009832"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${quantity}</arg>
+<arg>2</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-18T14:56:02.163319" elapsed="0.000149"/>
+</kw>
+<status status="PASS" start="2025-01-18T14:56:02.111750" elapsed="0.051771"/>
+</kw>
+<kw name="ตรวจสอบจำนวนแต้มต่อชิ้นที่จะได้รับของสินค้าในตะกร้า">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:02.163954" level="INFO">Clicking button 'id=header-menu-cart-btn'.</msg>
+<arg>id=header-menu-cart-btn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:02.163842" elapsed="0.053445"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=product-1-point</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-18T14:56:02.217430" elapsed="0.428827"/>
+</kw>
+<arg>388</arg>
+<status status="PASS" start="2025-01-18T14:56:02.163654" elapsed="0.482691"/>
+</kw>
+<kw name="กดปุ่ม Checkout">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=shopping-cart-checkout-btn</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-18T14:56:02.646701" elapsed="0.009903"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:02.656894" level="INFO">Clicking element 'id=shopping-cart-checkout-btn'.</msg>
+<arg>id=shopping-cart-checkout-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:02.656750" elapsed="0.452448"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.111747" level="INFO">Page title is 'Checkout'.</msg>
+<arg>Checkout</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.109394" elapsed="0.002463"/>
+</kw>
+<status status="PASS" start="2025-01-18T14:56:02.646508" elapsed="0.465423"/>
+</kw>
+<kw name="ใส่ที่อยู่จัดส่งสินค้า">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=shipping-form-first-name-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.112313" elapsed="0.009786"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.122823" level="INFO">Typing text 'abc' into text field 'id=shipping-form-first-name-input'.</msg>
+<arg>id=shipping-form-first-name-input</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.122488" elapsed="0.047241"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.170048" level="INFO">Typing text 'defg' into text field 'id=shipping-form-last-name-input'.</msg>
+<arg>id=shipping-form-last-name-input</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.169871" elapsed="0.050882"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.221064" level="INFO">Typing text 'บ้านพ่อมึง' into text field 'id=shipping-form-address-input'.</msg>
+<arg>id=shipping-form-address-input</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.220892" elapsed="0.060294"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.281505" level="INFO">Selecting options from selection list 'id=shipping-form-province-select' by label ปทุมธานี.</msg>
+<arg>id=shipping-form-province-select</arg>
+<arg>${province}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.281325" elapsed="0.046617"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.328261" level="INFO">Selecting options from selection list 'id=shipping-form-district-select' by label คลองหลวง.</msg>
+<arg>id=shipping-form-district-select</arg>
+<arg>${district}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.328086" elapsed="0.035289"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.363701" level="INFO">Selecting options from selection list 'id=shipping-form-sub-district-select' by label คลองหนึ่ง.</msg>
+<arg>id=shipping-form-sub-district-select</arg>
+<arg>${subdistrict}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.363512" elapsed="0.038997"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.412284" level="INFO">${output_zip} = 12120</msg>
+<var>${output_zip}</var>
+<arg>id=shipping-form-zipcode-input</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.402656" elapsed="0.009658"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${output_zip}</arg>
+<arg>${postcode}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.412441" elapsed="0.000162"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.412826" level="INFO">Typing text '1234567890' into text field 'id=shipping-form-mobile-input'.</msg>
+<arg>id=shipping-form-mobile-input</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.412690" elapsed="0.047595"/>
+</kw>
+<arg>abc</arg>
+<arg>defg</arg>
+<arg>บ้านพ่อมึง</arg>
+<arg>ปทุมธานี</arg>
+<arg>คลองหลวง</arg>
+<arg>คลองหนึ่ง</arg>
+<arg>12120</arg>
+<arg>1234567890</arg>
+<status status="PASS" start="2025-01-18T14:56:03.112093" elapsed="0.348297"/>
+</kw>
+<kw name="เลือกวิธีในการจัดส่งเป็น Thai post">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.461022" level="INFO">Clicking element 'id=shipping-method-2-card'.</msg>
+<arg>id=shipping-method-2-card</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.460894" elapsed="0.036431"/>
+</kw>
+<status status="PASS" start="2025-01-18T14:56:03.460594" elapsed="0.036814"/>
+</kw>
+<kw name="ตรวจสอบค่าจัดส่งสินค้าของ Thai post เท่ากันกัน 50.00 บาท">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=order-summary-shipping-fee-price</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.497803" elapsed="0.011345"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.509430" level="INFO">Verifying element 'id=order-summary-shipping-fee-price' contains exact text '฿50.00'.</msg>
+<arg>id=order-summary-shipping-fee-price</arg>
+<arg>฿50.00</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.509284" elapsed="0.008111"/>
+</kw>
+<status status="PASS" start="2025-01-18T14:56:03.497602" elapsed="0.019877"/>
+</kw>
+<kw name="เลือกช่องทางชำระเงิน Visa mastercard">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.518061" level="INFO">Clicking element 'id=payment-credit-input'.</msg>
+<arg>id=payment-credit-input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.517941" elapsed="0.036578"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.554842" level="INFO">Typing text 'John Cena' into text field 'id=payment-credit-form-fullname-input'.</msg>
+<arg>id=payment-credit-form-fullname-input</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.554661" elapsed="0.054883"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.609867" level="INFO">Typing text '000000000000000021' into text field 'id=payment-credit-form-card-number-input'.</msg>
+<arg>id=payment-credit-form-card-number-input</arg>
+<arg>${cardnumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.609693" elapsed="0.061522"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.671705" level="INFO">Typing text '111112' into text field 'id=payment-credit-form-expiry-input'.</msg>
+<arg>id=payment-credit-form-expiry-input</arg>
+<arg>${expire}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.671420" elapsed="0.058334"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.730075" level="INFO">Typing text '2224' into text field 'id=payment-credit-form-cvv-input'.</msg>
+<arg>id=payment-credit-form-cvv-input</arg>
+<arg>${cvv}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.729900" elapsed="0.043129"/>
+</kw>
+<arg>John Cena</arg>
+<arg>000000000000000021</arg>
+<arg>111112</arg>
+<arg>2224</arg>
+<status status="PASS" start="2025-01-18T14:56:03.517676" elapsed="0.255447"/>
+</kw>
+<kw name="ยืนยันการชำระเงิน">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=payment-now-btn</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.773726" elapsed="0.010297"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:03.784454" level="INFO">Clicking button 'id=payment-now-btn'.</msg>
+<arg>id=payment-now-btn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.784220" elapsed="0.040271"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>SCK Payment Gateway</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-18T14:56:03.824649" elapsed="0.279692"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-18T14:56:04.108970" level="INFO">Page title is 'SCK Payment Gateway'.</msg>
+<arg>SCK Payment Gateway</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-18T14:56:04.104479" elapsed="0.004597"/>
+</kw>
+<status status="PASS" start="2025-01-18T14:56:03.773418" elapsed="0.335763"/>
+</kw>
+<status status="PASS" start="2025-01-18T14:55:59.673171" elapsed="4.436189"/>
+</test>
+<status status="PASS" start="2025-01-18T14:55:59.591302" elapsed="4.518466"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Mall Creditcard Success">Mall Creditcard Success</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.3 on linux)" generated="2025-01-12T15:27:06.982923" rpa="false" schemaversion="5">
+<suite id="s1" name="Ecommerce" source="/home/dlwlrma/Desktop/Selenium/robot_framework_workshop/google/ecommerce.robot">
+<kw name="เปิดเว็บเบราว์เซอร์" owner="ecommerce_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-12T15:27:07.063234" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-12T15:27:07.063070" elapsed="0.171668"/>
+</kw>
+<status status="PASS" start="2025-01-12T15:27:07.062670" elapsed="0.172239"/>
+</kw>
+<test id="s1-t1" name="ทดสอบใส่คำค้น &quot;ไฟน์ไลน์&quot; และควรเจอ &quot;ไฟน์ไลน์ พลัส ผลิตภัณฑ์ซักผ้าชนิดน้ำ (แกลลอน) 3000 มล.&quot;" line="11">
+<kw name="เข้าสู่เว็บไซต์ All Online" owner="ecommerce_resources" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-12T15:27:07.237251" level="INFO">Opening url 'https://www.allonline.7eleven.co.th/'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-12T15:27:07.237113" elapsed="0.126173"/>
+</kw>
+<status status="PASS" start="2025-01-12T15:27:07.236884" elapsed="0.126517"/>
+</kw>
+<kw name="ใส่คำค้นหาและตรวจสอบรายละเอียดสินค้า" owner="ecommerce_resources">
+<kw name="ใส่คำค้นหา" owner="ecommerce_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-12T15:27:07.364475" level="INFO">Typing text 'ไฟน์ไลน์' into text field 'name=q'.</msg>
+<msg time="2025-01-12T15:27:07.416559" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-12T15:27:07.416699" level="FAIL">Element with locator 'name=q' not found.</msg>
+<arg>name=q</arg>
+<arg>${search_key}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-01-12T15:27:07.364061" elapsed="0.053431">Element with locator 'name=q' not found.</status>
+</kw>
+<arg>${search_key}</arg>
+<status status="FAIL" start="2025-01-12T15:27:07.363858" elapsed="0.053770">Element with locator 'name=q' not found.</status>
+</kw>
+<kw name="กดปุ่ม Enter" owner="ecommerce_resources">
+<status status="NOT RUN" start="2025-01-12T15:27:07.417765" elapsed="0.000025"/>
+</kw>
+<kw name="ตรวจสอบผลการค้นหา" owner="ecommerce_resources">
+<arg>${product_name}</arg>
+<status status="NOT RUN" start="2025-01-12T15:27:07.417859" elapsed="0.000017"/>
+</kw>
+<kw name="กดดูรายละเอียดสินค้า" owner="ecommerce_resources">
+<arg>${product_name}</arg>
+<status status="NOT RUN" start="2025-01-12T15:27:07.417953" elapsed="0.000017"/>
+</kw>
+<kw name="ตรวจสอบรายละเอียดสินค้า" owner="ecommerce_resources">
+<arg>${product_code}</arg>
+<status status="NOT RUN" start="2025-01-12T15:27:07.418029" elapsed="0.000017"/>
+</kw>
+<arg>ไฟน์ไลน์</arg>
+<arg>ไฟน์ไลน์ พลัส ผลิตภัณฑ์ซักผ้าชนิดน้ำ (แกลลอน) 3000 มล.</arg>
+<arg>366839010</arg>
+<status status="FAIL" start="2025-01-12T15:27:07.363610" elapsed="0.054492">Element with locator 'name=q' not found.</status>
+</kw>
+<status status="FAIL" start="2025-01-12T15:27:07.235055" elapsed="0.183198">Element with locator 'name=q' not found.</status>
+</test>
+<test id="s1-t2" name="ทดสอบใส่คำค้น &quot;มังงะ&quot; และควรเจอ &quot;หนังสือการ์ตูน โกคุราคุไก สุขาวดีสีเลือด 1 (Mg)&quot;" line="12">
+<kw name="เข้าสู่เว็บไซต์ All Online" owner="ecommerce_resources" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-12T15:27:07.419847" level="INFO">Opening url 'https://www.allonline.7eleven.co.th/'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-12T15:27:07.419741" elapsed="0.020205"/>
+</kw>
+<status status="PASS" start="2025-01-12T15:27:07.419578" elapsed="0.020474"/>
+</kw>
+<kw name="ใส่คำค้นหาและตรวจสอบรายละเอียดสินค้า" owner="ecommerce_resources">
+<kw name="ใส่คำค้นหา" owner="ecommerce_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-12T15:27:07.440973" level="INFO">Typing text 'มังงะ' into text field 'name=q'.</msg>
+<msg time="2025-01-12T15:27:07.496263" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-12T15:27:07.496392" level="FAIL">Element with locator 'name=q' not found.</msg>
+<arg>name=q</arg>
+<arg>${search_key}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-01-12T15:27:07.440811" elapsed="0.056014">Element with locator 'name=q' not found.</status>
+</kw>
+<arg>${search_key}</arg>
+<status status="FAIL" start="2025-01-12T15:27:07.440489" elapsed="0.056447">Element with locator 'name=q' not found.</status>
+</kw>
+<kw name="กดปุ่ม Enter" owner="ecommerce_resources">
+<status status="NOT RUN" start="2025-01-12T15:27:07.497067" elapsed="0.000026"/>
+</kw>
+<kw name="ตรวจสอบผลการค้นหา" owner="ecommerce_resources">
+<arg>${product_name}</arg>
+<status status="NOT RUN" start="2025-01-12T15:27:07.497161" elapsed="0.000020"/>
+</kw>
+<kw name="กดดูรายละเอียดสินค้า" owner="ecommerce_resources">
+<arg>${product_name}</arg>
+<status status="NOT RUN" start="2025-01-12T15:27:07.497270" elapsed="0.000018"/>
+</kw>
+<kw name="ตรวจสอบรายละเอียดสินค้า" owner="ecommerce_resources">
+<arg>${product_code}</arg>
+<status status="NOT RUN" start="2025-01-12T15:27:07.497348" elapsed="0.000022"/>
+</kw>
+<arg>มังงะ</arg>
+<arg>หนังสือการ์ตูน โกคุราคุไก สุขาวดีสีเลือด 1 (Mg)</arg>
+<arg>656810010</arg>
+<status status="FAIL" start="2025-01-12T15:27:07.440249" elapsed="0.057198">Element with locator 'name=q' not found.</status>
+</kw>
+<status status="FAIL" start="2025-01-12T15:27:07.418441" elapsed="0.079163">Element with locator 'name=q' not found.</status>
+</test>
+<test id="s1-t3" name="ทดสอบใส่คำค้น &quot;ตู้เย็น&quot; และควรเจอ &quot;Alco ตู้เย็นมินิบาร์ ขนาด 1.7 คิว รุ่น AN-FR468 ALCO&quot;" line="13">
+<kw name="เข้าสู่เว็บไซต์ All Online" owner="ecommerce_resources" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-12T15:27:07.499543" level="INFO">Opening url 'https://www.allonline.7eleven.co.th/'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-12T15:27:07.499323" elapsed="0.030435"/>
+</kw>
+<status status="PASS" start="2025-01-12T15:27:07.499069" elapsed="0.030777"/>
+</kw>
+<kw name="ใส่คำค้นหาและตรวจสอบรายละเอียดสินค้า" owner="ecommerce_resources">
+<kw name="ใส่คำค้นหา" owner="ecommerce_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-12T15:27:07.530721" level="INFO">Typing text 'ตู้เย็น' into text field 'name=q'.</msg>
+<msg time="2025-01-12T15:27:07.580425" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-12T15:27:07.580553" level="FAIL">Element with locator 'name=q' not found.</msg>
+<arg>name=q</arg>
+<arg>${search_key}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-01-12T15:27:07.530562" elapsed="0.050382">Element with locator 'name=q' not found.</status>
+</kw>
+<arg>${search_key}</arg>
+<status status="FAIL" start="2025-01-12T15:27:07.530298" elapsed="0.050759">Element with locator 'name=q' not found.</status>
+</kw>
+<kw name="กดปุ่ม Enter" owner="ecommerce_resources">
+<status status="NOT RUN" start="2025-01-12T15:27:07.581192" elapsed="0.000025"/>
+</kw>
+<kw name="ตรวจสอบผลการค้นหา" owner="ecommerce_resources">
+<arg>${product_name}</arg>
+<status status="NOT RUN" start="2025-01-12T15:27:07.581290" elapsed="0.000027"/>
+</kw>
+<kw name="กดดูรายละเอียดสินค้า" owner="ecommerce_resources">
+<arg>${product_name}</arg>
+<status status="NOT RUN" start="2025-01-12T15:27:07.581450" elapsed="0.000029"/>
+</kw>
+<kw name="ตรวจสอบรายละเอียดสินค้า" owner="ecommerce_resources">
+<arg>${product_code}</arg>
+<status status="NOT RUN" start="2025-01-12T15:27:07.581604" elapsed="0.000023"/>
+</kw>
+<arg>ตู้เย็น</arg>
+<arg>Alco ตู้เย็นมินิบาร์ ขนาด 1.7 คิว รุ่น AN-FR468 ALCO</arg>
+<arg>194876010</arg>
+<status status="FAIL" start="2025-01-12T15:27:07.530064" elapsed="0.051657">Element with locator 'name=q' not found.</status>
+</kw>
+<status status="FAIL" start="2025-01-12T15:27:07.497842" elapsed="0.084060">Element with locator 'name=q' not found.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-12T15:27:07.582371" elapsed="0.073093"/>
+</kw>
+<status status="FAIL" start="2025-01-12T15:27:06.983588" elapsed="0.671936"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Ecommerce">Ecommerce</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
