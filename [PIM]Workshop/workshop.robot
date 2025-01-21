@@ -14,9 +14,13 @@ Successful Purchase Process with Address Confirmation and Payment
     Accept website cookies
     Logs In with Valid Credentials    pahnkcnforyt@gmail.com    Pim123456!
     Search Product by Name    ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม
-    Verify Search Results    ผลการค้นหาสำหรับ »ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม« (9155 สินค้า)    ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม
+    Verify Search Results    ผลการค้นหาสำหรับ »ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม« (9164 สินค้า)    ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม
     Choose Product from Results    ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม
     Verify Product Details    ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม    ฿ 38
+    Place Order
+    Select Shipping Method
+    Fill Shipping Details    พันกร    ชมจันทร์    061-991-7765    45/9    7    สมุทรปราการ    บางพลี    บางปลา    10540
+    Proceed To Checkout
 
 *** Keywords ***
 Open Browser to Webpage
@@ -61,3 +65,42 @@ Verify Product Details
     Wait Until Element Is Visible    id=title-product    timeout=3s
     Element Should Contain 	 id=title-product 	 ${product_name}
     Element Should Contain 	 class=price 	 ${product_price}
+
+Place Order
+    Wait Until Element Is Visible    class=buy-now    timeout=3s
+    Click Button 	 class=buy-now
+
+Select Shipping Method
+    Wait Until Element Is Visible    class=tab-address    timeout=3s
+    Click Element    class=tab-address
+
+Fill Shipping Details
+    [Arguments]    ${name}    ${last_name}    ${tel}    ${house_no}    ${moo}    ${province}    ${district}    ${sub_district}    ${postal_code}
+    Wait Until Element Is Visible    id=address    timeout=3s
+    Input text    id=new-address-name    ${name}
+    Input text    id=new-address-lastname    ${last_name}
+    Input text    id=new-address-mobile    ${tel}
+    Input text    id=new-address-addrno    ${house_no}
+    Input text    id=new-address-moo    ${moo}
+    Click Element    id=select2-new-address-province-container
+    Wait Until Element Is Visible    id=select2-new-address-province-results    timeout=3s
+    Input text    class=select2-search__field    ${province}
+    Press Keys    class=select2-search__field    RETURN
+    Click Element    id=select2-new-address-district-container
+    Wait Until Element Is Visible    id=select2-new-address-district-results    timeout=3s
+    Input text    class=select2-search__field    ${district}
+    Press Keys    class=select2-search__field    RETURN
+    Click Element    id=select2-new-address-sub-district-container
+    Wait Until Element Is Visible    id=select2-new-address-sub-district-results    timeout=3s
+    Input text    class=select2-search__field    ${sub_district}
+    Press Keys    class=select2-search__field    RETURN
+    Wait Until Element Is Visible    id=selected-location    timeout=3s
+    Click Element    id=selected-location
+    Wait Until Element Is Visible    id=new-address-postal-code    timeout=3s
+    ${get_postal_code}    Get Value    id=new-address-postal-code
+    Should Be Equal    ${get_postal_code}    ${postal_code}
+    Wait Until Element Is Visible    id=conf-dif-addr    timeout=3s
+    Click Element    id=conf-dif-addr
+    Sleep    3s
+
+Proceed To Checkout
