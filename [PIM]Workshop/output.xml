@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.12.5 on win32)" generated="2025-01-21T13:32:53.939370" rpa="false" schemaversion="5">
+<suite id="s1" name="Workshop" source="C:\Users\USER\Desktop\robotFramework\[PIM]Workshop\workshop.robot">
+<test id="s1-t1" name="Successful Purchase Process with Address Confirmation and Payment" line="12">
+<kw name="Open Browser to Webpage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:32:54.163394" level="INFO">Opening browser 'firefox' to base url 'https://www.allonline.7eleven.co.th/'.</msg>
+<arg>${DEV_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-21T13:32:54.163394" elapsed="6.531127"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=page</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-21T13:33:00.695524" elapsed="0.060297"/>
+</kw>
+<status status="PASS" start="2025-01-21T13:32:54.162385" elapsed="6.593436"/>
+</kw>
+<kw name="Accept website cookies">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-accept-gdpr</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-21T13:33:00.756822" elapsed="0.693982"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:01.450804" level="INFO">Clicking button 'id=btn-accept-gdpr'.</msg>
+<arg>id=btn-accept-gdpr</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T13:33:01.450804" elapsed="4.039414"/>
+</kw>
+<status status="PASS" start="2025-01-21T13:33:00.755821" elapsed="4.734397"/>
+</kw>
+<kw name="Logs In with Valid Credentials">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:05.491221" level="INFO">Clicking element 'Xpath=//*[@id="page"]/header/div[4]/div/div/div/ul/li[4]/a'.</msg>
+<arg>Xpath=//*[@id="page"]/header/div[4]/div/div/div/ul/li[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T13:33:05.491221" elapsed="1.044533"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-21T13:33:06.536754" elapsed="0.019556"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:06.557308" level="INFO">Typing text 'pahnkcnforyt@gmail.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T13:33:06.556310" elapsed="0.047876"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:06.605350" level="INFO">Typing text 'Pim123456!' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T13:33:06.605350" elapsed="0.021201"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:06.626551" level="INFO">Clicking element 'Xpath=/html/body/div[1]/div/div/div[2]/div[2]/div/div/div/div[6]/a[1]'.</msg>
+<arg>Xpath=/html/body/div[1]/div/div/div[2]/div[2]/div/div/div/div[6]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T13:33:06.626551" elapsed="0.225918"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>ALL member</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-21T13:33:06.852469" elapsed="1.825235"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:08.678705" level="INFO">Clicking button 'Xpath=/html/body/div[1]/div/div/div[2]/div[2]/div/div/div[3]/div/button[2]'.</msg>
+<arg>Xpath=/html/body/div[1]/div/div/div[2]/div[2]/div/div/div[3]/div/button[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T13:33:08.677704" elapsed="0.216493"/>
+</kw>
+<arg>pahnkcnforyt@gmail.com</arg>
+<arg>Pim123456!</arg>
+<status status="PASS" start="2025-01-21T13:33:05.490218" elapsed="3.403979"/>
+</kw>
+<kw name="Search Product by Name">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-21T13:33:08.895198" elapsed="1.267378"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:10.163919" level="INFO">Typing text 'ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>${product_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T13:33:10.162576" elapsed="0.070986"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:10.234567" level="INFO">Clicking button 'Xpath=/html/body/div[13]/header/div[5]/div/div/div/div/ul/li[3]/div/div[1]/form/div/span/button'.</msg>
+<arg>Xpath=/html/body/div[13]/header/div[5]/div/div/div/div/ul/li[3]/div/div[1]/form/div/span/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T13:33:10.233562" elapsed="4.143036"/>
+</kw>
+<arg>ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม</arg>
+<status status="PASS" start="2025-01-21T13:33:08.895198" elapsed="5.481400"/>
+</kw>
+<kw name="Verify Search Results">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:14.397087" level="INFO">${search_result} = ผลการค้นหาสำหรับ »ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม« (9155 สินค้า)</msg>
+<var>${search_result}</var>
+<arg>class=header-category</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T13:33:14.377606" elapsed="0.019481"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${search_result}</arg>
+<arg>${expect_result}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-21T13:33:14.398089" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${product_name}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-21T13:33:14.398089" elapsed="0.008014"/>
+</kw>
+<arg>ผลการค้นหาสำหรับ »ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม« (9155 สินค้า)</arg>
+<arg>ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม</arg>
+<status status="PASS" start="2025-01-21T13:33:14.377606" elapsed="0.028497"/>
+</kw>
+<kw name="Choose Product From Results">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-21T13:33:14.408127" level="INFO">${dynamic_product_xpath} = //div[contains(@class, 'product-item') and contains(., 'ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม')]</msg>
+<var>${dynamic_product_xpath}</var>
+<arg>//div[contains(@class, 'product-item') and contains(., '${product_name}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-21T13:33:14.407108" elapsed="0.001019"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=${dynamic_product_xpath}</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-21T13:33:14.408127" elapsed="0.020955"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=${dynamic_product_xpath}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-21T13:33:14.430083" elapsed="0.285424"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:14.715507" level="INFO">Clicking element 'xpath=//div[contains(@class, 'product-item') and contains(., 'ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม')]'.</msg>
+<arg>xpath=${dynamic_product_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T13:33:14.715507" elapsed="2.189531"/>
+</kw>
+<arg>ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม</arg>
+<status status="PASS" start="2025-01-21T13:33:14.407108" elapsed="2.497930"/>
+</kw>
+<kw name="Verify Product Details">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=title-product</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-21T13:33:16.906036" elapsed="0.011638"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:16.950784" level="INFO">Element 'id=title-product' contains text 'ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม'.</msg>
+<arg>id=title-product</arg>
+<arg>${product_name}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-01-21T13:33:16.917674" elapsed="0.033110"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-21T13:33:16.958807" level="INFO">Element 'class=price' contains text '฿ 38'.</msg>
+<arg>class=price</arg>
+<arg>${product_price}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-01-21T13:33:16.950784" elapsed="0.009021"/>
+</kw>
+<arg>ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม</arg>
+<arg>฿ 38</arg>
+<status status="PASS" start="2025-01-21T13:33:16.906036" elapsed="0.053769"/>
+</kw>
+<status status="PASS" start="2025-01-21T13:32:54.162385" elapsed="22.797420"/>
+</test>
+<status status="PASS" start="2025-01-21T13:32:53.940367" elapsed="23.019438"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Workshop" id="s1" pass="1" fail="0" skip="0">Workshop</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
