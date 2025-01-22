@@ -83,14 +83,14 @@ Select Shipping Method And Fill Shipping Details
     Input text    class=select2-search__field    ${sub_district}
     Press Keys    class=select2-search__field    RETURN
     Wait Until Element Is Enabled 	 id=selected-location 	 timeout=3s
-    Sleep    2s
+    # Sleep    2s
     Click Element    id=selected-location
     Wait Until Element Is Visible    id=conf-dif-addr    timeout=3s
     Click Element    id=conf-dif-addr
     Wait Until Element Is Visible    id=new-address-postal-code    timeout=3s
     ${get_postal_code}    Get Value    id=new-address-postal-code
     Should Be Equal    ${get_postal_code}    ${postal_code}
-    Sleep    2s
+    # Sleep    2s
     Wait Until Element Is Visible 	 id=continue-payment-btn 	 timeout=3s
     Click Button    id=continue-payment-btn
 
@@ -99,7 +99,7 @@ Choose Payment Method And Fill Payment Details
     Wait Until Element Is Visible    id=payment-options    timeout=3s
     Click Button    Xpath=/html/body/div[3]/div/form/div[1]/div[1]/div[3]/div[1]/button
     Wait Until Element Is Enabled    class=continue-payment-btn    timeout=5s
-    Sleep    2s
+    # Sleep    2s
     Click Button    class=continue-payment-btn
     Wait Until Element Is Visible    id=contentCreditCard    timeout=10s
     Input text    id=cardName    ${card_name}
